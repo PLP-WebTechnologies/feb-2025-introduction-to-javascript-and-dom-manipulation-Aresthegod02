@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Book Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: #6a1b9a;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    ul#book-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    li.book-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fafafa;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 70%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+
+    button {
+      background-color: #6a1b9a;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #8e24aa;
+    }
+
+    #status-bar {
+      margin-top: 1rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📚 Mini Book Store</h1>
+    <p>Manage your growing book collection like a pro!</p>
+  </header>
+
+  <main>
+    <ul id="book-list">
+      <li class="book-item">Christmas In Lagos<button onclick="removeBook(this)">Remove</button></li>
+      <li class="book-item">Black Blur White <button onclick="removeBook(this)">Remove</button></li>
+    </ul>
+
+    <div style="margin-top: 1.5rem;">
+      <input type="text" id="new-book" placeholder="Enter new book title" />
+      <button onclick="addBook()">Add Book</button>
+    </div>
+
+    <!-- Dynamic status bar will be added here -->
+    <div id="status-bar"></div>
+  </main>
+
+  <footer>
+    &copy; 2025 Ares' Bookstore. All vibes, no issues.
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
